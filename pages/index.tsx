@@ -25,7 +25,6 @@ export default function Home({
 
   return (
     <>
-      <h1>Home Page</h1>
       <Grid>
         { products.slice(0, 6).map(product =>
           <ProductCard product={product} key={product.id} />
