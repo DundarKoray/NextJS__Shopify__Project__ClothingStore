@@ -1,5 +1,7 @@
 import { FC } from "react"
 import style from "./Hero.module.css"
+import Link from "next/link"
+import { Container } from "@components/ui"
 
 interface Props {
     headline: string
@@ -9,10 +11,15 @@ interface Props {
 const Hero: FC<Props> = ({headline, description}) => {
   return (
     <div className="bg-black">
+      <Container>
         <div className={style.root}>
-            <h1>{headline}</h1>
-            <h2>{description}</h2>
+            <h2 className={style.headline}>{headline}</h2>
+            <div>
+              <p className={style.description}>{description}</p>
+              <Link href="/"><a>Read it here</a></Link>
+            </div>
         </div>
+      </Container>
     </div>
   )
 }
