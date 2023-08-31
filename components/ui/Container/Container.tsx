@@ -1,14 +1,14 @@
-import { FC, ReactNode } from "react"
+import { FC, ReactNode, ComponentType, HTMLAttributes } from "react"
 import style from "./Container.module.css"
 
 interface Props {
     children: ReactNode | ReactNode[],
-    Element?: any
+    element?: ComponentType<HTMLAttributes<HTMLElement>>
 }
 
-const Container:FC<Props> = ({children, Element = "div"}) => {
+const Container:FC<Props> = ({children, element: Component = "div"}) => {
   return (
-    <Element className={style.container}>{children}</Element>
+    <Component className={style.container}>{children}</Component>
   )
 }
 

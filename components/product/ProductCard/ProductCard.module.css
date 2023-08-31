@@ -40,7 +40,7 @@
     &:before {
         @apply block w-full h-full bg-repeat-space transition-transform duration-500;
         content: "";
-        background-image: url("/product-pattern-bg.svg")
+        background-image: url("/product-pattern-bg.svg");
     }
 }
 
@@ -69,4 +69,12 @@
 }
 
 
+/* variants simple-product and slim-product */
+.slimProduct {
+    @apply flex flex-col;
+    align-items: center;
 
+    .productName {
+        @apply bg-black text-white font-bold p-3 text-xl inline-block;
+    }
+}

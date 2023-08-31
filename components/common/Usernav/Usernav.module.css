@@ -1,0 +1,11 @@
+.list {
+    @apply flex space-x-6;
+}
+
+.item {
+    @apply cursor-pointer text-accents-6 transition;
+
+    &:hover {
+        @apply text-accents-9 scale-110;
+    }
+}

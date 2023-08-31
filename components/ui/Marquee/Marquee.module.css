@@ -1,0 +1,16 @@
+.marquee {
+    @apply bg-black;
+}
+
+.container {
+    @apply flex flex-row;
+
+    /* apply all it's children */
+    & > * {
+        @apply flex-1 px-16 py-4;
+    }
+}
+
+.secondary {
+    @apply bg-white;
+}

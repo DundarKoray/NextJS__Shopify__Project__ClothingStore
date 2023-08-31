@@ -1,0 +1,24 @@
+.root {
+    @apply flex;
+
+    @screen md {
+        @apply py-4;
+    }
+}
+
+.nav {
+    /* space-x-6 applies margin left for all the children elements except the first one */
+    @apply ml-6 space-x-6 mr-auto;
+}
+
+.link {
+    @apply text-accents-6 leading-6 font-medium transition;
+
+    &:hover {
+        @apply text-accents-9;
+    }
+}
+
+.logo {
+    @apply text-2xl font-bold;
+}

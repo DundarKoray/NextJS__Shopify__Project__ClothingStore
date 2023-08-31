@@ -6,10 +6,7 @@ interface Props {
   layout?: "A" | "B"
 }
 
-const Grid:FC<Props> = ({
-  children,
-  layout = "A"
-}) => {
+const Grid:FC<Props> = ({children,layout = "A"}) => {
 
   const rootClassName = classnames(
     style.root,
