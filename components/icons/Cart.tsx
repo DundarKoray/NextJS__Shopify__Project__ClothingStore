@@ -1,4 +1,4 @@
-const Bag = ({ ...props }) => {
+const Cart = ({ ...props }) => {
   return (
     <svg
       width="20"
@@ -30,4 +30,4 @@ const Bag = ({ ...props }) => {
   )
 }
 
-export default Bag
+export default Cart

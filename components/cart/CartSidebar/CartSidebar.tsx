@@ -1,10 +1,11 @@
 import { FC } from 'react'
-import Link from 'next/link'
-import { Bag, Cross } from '@components/icons'
+import { Cart, Cross } from '@components/icons'
 import classNames from 'classnames'
+import { useUI } from '@components/ui/context'
 
 const CartSidebar: FC = () => {
   const isEmpty = true
+  const { closeSidebar } = useUI()
 
   const rootClass = classNames(
     "h-full flex flex-col",
@@ -17,7 +18,7 @@ const CartSidebar: FC = () => {
         <div className="flex items-start justify-between space-x-3">
           <div className="h-7 flex items-center">
             <button
-              onClick={() => alert("Closing Sidebar")}
+              onClick={closeSidebar}
               className="hover:text-gray-500 transition ease-in-out duration-150"
             >
               <Cross className="h-6 w-6" />
@@ -29,7 +30,7 @@ const CartSidebar: FC = () => {
       {isEmpty ? (
         <div className="flex-1 px-4 flex flex-col justify-center items-center">
           <span className="border border-dashed border-primary rounded-full flex items-center justify-center w-16 h-16 p-12 bg-secondary text-secondary">
-            <Bag className="absolute" />
+            <Cart className="absolute" />
           </span>
           <h2 className="pt-6 text-2xl font-bold tracking-wide text-center">
             Your cart is empty
